@@ -8,8 +8,8 @@ public class GameManager : MonoBehaviour
     public Vector2Int[] boundariesInt;
     private Boundary[] boundaries;
     public Transform[] crateTargets;
-    public GameObject objective;
-    public GameObject spikes;
+    public Objective objective;
+    public Spikes spikes;
 
     public bool allCratesPlaced = false;
     
@@ -105,6 +105,10 @@ public class GameManager : MonoBehaviour
                 }
             }
             allCratesPlaced = allCratesPlacedCheck;
+        }
+        else
+        {
+            spikes.LowerSpikes();
         }
     }
     
